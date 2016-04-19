@@ -12,6 +12,7 @@
       sliderControls,
       sliderControlsParent,
       slideShowEffect,
+      slideShowSpeed,
       prevBtn,
       nextBtn;
 
@@ -21,7 +22,7 @@
 
   count = 0;
   speed = 50;
-  slideShow('off'); // "on" or "off"
+  slideShow('on'); // "on" or "off"
 
 
 
@@ -70,7 +71,6 @@
 
   function prevImg(e) {
     if (e) e.preventDefault();
-    console.log(count);
 
     if (sliderImg.style.opacity == 1)  {
 
@@ -90,7 +90,6 @@
 
   function nextImg(e) {
     if (e) e.preventDefault();
-    console.log(count);
 
     if (sliderImg.style.opacity == 1) {
 
