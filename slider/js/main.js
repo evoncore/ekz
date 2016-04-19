@@ -3,12 +3,14 @@
   'use strict';
 
   var doc,
+      newA,
       slider,
       sliderImg,
       count,
       images,
       speed,
       sliderControls,
+      sliderControlsParent,
       slideShowEffect,
       prevBtn,
       nextBtn;
@@ -19,7 +21,7 @@
 
   count = 0;
   speed = 50;
-  slideShow('on'); // "on" or "off"
+  slideShow('off'); // "on" or "off"
 
 
 
@@ -27,11 +29,20 @@
 
   slider = doc.querySelector('#slider');
   sliderImg = doc.querySelector('#slider .slider-img');
-  sliderControls = doc.querySelectorAll('#slider .slider-controls a');
+  sliderControlsParent = doc.querySelector('#slider .slider-controls');
   prevBtn = doc.querySelector('#slider .btn.prev');
   nextBtn = doc.querySelector('#slider .btn.next');
 
   images = ['artisnavi.jpg', 'city.jpg', 'hdoboi.jpg', 'sepik.jpg', 'strah.jpg'];
+
+  for (var i = 0; i < images.length; i++) {
+    newA = document.createElement('a');
+    newA.setAttribute('href', '#');
+    newA.setAttribute('data-num', i);
+    sliderControlsParent.appendChild(newA);
+  }
+
+  sliderControls = doc.querySelectorAll('#slider .slider-controls a');
 
 
 
