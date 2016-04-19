@@ -70,15 +70,15 @@
 
   function prevImg(e) {
     if (e) e.preventDefault();
+    console.log(count);
 
     if (sliderImg.style.opacity == 1)  {
-
-      fadeOut(count--, fadeIn);
 
       if (count === 0) {
         count = images.length;
       }
 
+      fadeOut(count--, fadeIn);
       if (count === -1) { // -1: fix dataset bug ("if" must be alone)
         count = images.length - 1;
       }
@@ -90,15 +90,15 @@
 
   function nextImg(e) {
     if (e) e.preventDefault();
+    console.log(count);
 
     if (sliderImg.style.opacity == 1) {
-
-      fadeOut(count++, fadeIn);
 
       if (count > images.length - 1) {
         count = 0;
       }
 
+      fadeOut(count++, fadeIn);
       stopSlideShow();
       showImg(slider);
     }
