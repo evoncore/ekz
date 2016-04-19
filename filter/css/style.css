@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.panel {
+  margin: 20px;
+}
+
+.panel:hover { cursor: default; }
+
+.panel .current {
+  background-color: #222;
+  color: #fff;
+}
+
+.panel label { 
+  transition: .2s;
+}
+
+.panel label:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.panel input[type=radio] {
+  display: none;
+}
+
+.panel label {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: 1px solid #222;
+  box-sizing: border-box;
+}
+
+.panel label:hover {
+  cursor: pointer;
+}
+
+.block {
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  height: 250px;
+  background-color: #222;
+  float: left;
+  margin: 5px;
+  position: relative;
+}
+
+.block span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.block.php {
+  background-color: #3E3EC8;
+}
+
+.block.nodejs {
+  background-color: #69BB35;
+}
+
+.block.django {
+  background-color: #3DB598;
+}
+
+.block.ror {
+  background-color: #AA2220;
+}
+
+.block.dotnet {
+  background-color: #27AEE3;
+}
