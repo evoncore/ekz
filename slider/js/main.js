@@ -22,6 +22,7 @@
   slideShow('on'); // "on" or "off"
 
 
+
   // Get Elements
 
   slider = doc.querySelector('#slider');
@@ -40,6 +41,8 @@
   sliderImg.style.opacity = 1;
   showImg(sliderImg);
   showCurrentControlBtn();
+
+
 
   // Add Events
 
@@ -166,8 +169,8 @@
   function stopSlideShow() {
     clearInterval(slideShowEffect);
     console.log('slide-show off');
-    setTimeout(function() { slideShow('on') }, 15000);
   }
+
 
 
   // Support Functions
