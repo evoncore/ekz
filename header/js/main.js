@@ -8,21 +8,32 @@
       blocks,
       anchor,
       squareBlock,
-      flyingBlocks;
+      flyingBlocks,
+      h1;
 
   doc = document;
+  h1 = doc.querySelector('h1');
   header = doc.querySelector('header');
-  headerA = doc.querySelector('header nav a');
+  headerA = doc.querySelectorAll('header nav a');
   blocks = doc.querySelectorAll('.block');
   flyingBlocks = doc.querySelectorAll('.flying-block');
   anchor = doc.querySelector('#anchor');
   squareBlock = doc.querySelector('.square-block');
 
-  document.addEventListener('scroll', function() {
+  function addForCollection(object, value) {
+    for (var i = 0; i < object.length; i++) {
+      object[i].style.padding = value;
+    }
+  }
+
+  doc.addEventListener('scroll', function() {
+    h1.style.opacity = 0;
     if (window.pageYOffset > 20) {
-      header.style.padding = '20px 20px';
+      addForCollection(headerA, '10px 20px');
+      header.style.backgroundColor = 'rgba(34, 34, 34, .5)';
     } else if (window.pageYOffset < 100) {
-      header.style.padding = '40px 20px'
+      addForCollection(headerA, '20px 20px');
+      header.style.backgroundColor = 'rgba(34, 34, 34, 1)';
     }
 
     if (window.pageYOffset > 200) {
@@ -37,11 +48,11 @@
       }, 1050);
     }
 
-    if (window.pageYOffset > 450) {
+    if (window.pageYOffset > 550) {
       squareBlock.style.opacity = 1;
     }
 
-    if (window.pageYOffset > 550) {
+    if (window.pageYOffset > 750) {
       setInterval(function() {
         flyingBlocks[0].style.opacity = 1;
         flyingBlocks[0].style.marginLeft = '55px';

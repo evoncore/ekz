@@ -1,3 +1,5 @@
+@import url('header.css');
+
 * {
   padding: 0;
   margin: 0;
@@ -79,37 +81,6 @@ hr {
   margin: 100px 0;
 }
 
-header {
-  z-index: 999;
-  top: 0;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  background-color: #222;
-  padding: 40px 20px;
-  transition: .2s;
-}
-
-header ul {
-  display: inline-block;
-  list-style-type: none;
-}
-
-header ul li {
-  display: inline-block;
-}
-
-header nav a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 0 20px;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
 .clearfix:before,
 .clearfix:after {
   display: block;
@@ -173,4 +144,59 @@ header nav a:hover {
 
 .menu-btn ul {
   display: none;
+}
+
+/*=== FORM ===*/
+
+form {
+  text-align: center;
+  margin-top: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+form span.error {
+  position: absolute;
+  top: 0;
+  color: #FE6058;
+}
+
+form span.error-email {
+  right: -120px;
+  top: 32px;
+  display: none;
+}
+
+form span.error-pass {
+  top: 99px;
+  right: -150px;
+  display: none;
+}
+
+form input {
+  display: block;
+  border: 1px solid rgba(34, 34, 34, .4);
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+form input:focus {
+  border: 1px solid rgba(34, 34, 34, 1);
+}
+
+form input[type=submit] {
+  border: 1px solid rgba(34, 34, 34, 1);
+  font-size: 14px;
+  padding: 5px 20px;
+  margin-top: 20px;
+  display: inline-block;
+  background-color: rgba(255,255,255,0);
+  transition: .2s;
+}
+
+form input[type=submit]:hover {
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
 }

@@ -43,7 +43,7 @@
       }
       mainImgBorderBottom.style.width = borderBottomValue + '%';
     }, 10);
-  }, 700);
+  }, 400);
 
   var borderLeftValue = 0;
   setTimeout(function(){
@@ -56,7 +56,7 @@
         minImgBordersLeft[i].style.height = borderLeftValue + 'px';
       }
     }, 10);
-  }, 930);
+  }, 630);
 
   var minImgBordersBottomValue = 0;
   setTimeout(function() {
@@ -67,7 +67,7 @@
       }
       minImgBordersBottom.style.width = minImgBordersBottomValue + '%';
     }, 10);
-  }, 1150);
+  }, 850);
 
   var galleryBorderLeftValue = 0;
   setTimeout(function() {
@@ -78,7 +78,7 @@
       }
       galleryBorderLeft.style.height = (galleryBorderRightValue + 10) + 'px';
     }, 10);
-  }, 1430);
+  }, 1130);
 
   var galleryBorderRightValue = 0;
   setTimeout(function() {
@@ -87,8 +87,8 @@
       if (galleryBorderRightValue >= 841) {
         clearInterval(galleryBorderRightEffect);
       }
-      galleryBorderRight.style.height = (galleryBorderRightValue + 10) + 'px';
+      galleryBorderRight.style.height = (galleryBorderRightValue - 10) + 'px';
     }, 10);
-  }, 1430);
+  }, 1130);
 
 })();
