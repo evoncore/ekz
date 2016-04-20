@@ -1,0 +1,87 @@
+@import url('../../css/header.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #aaa;
+}
+
+#gallery {
+  margin: 0 auto;
+  width: 1000px;
+  position: relative;
+}
+
+.gallery-border-left {
+  position: absolute;
+  left: -10px;
+  width: 10px;
+  bottom: -240px;
+  height: 0;
+  background-color: rgba(255,255,255, .9);
+}
+
+.gallery-border-right {
+  position: absolute;
+  right: -10px;
+  width: 10px;
+  top: 0;
+  height: 0;
+  background-color: rgba(255,255,255, .9);  
+}
+
+.main-img {
+  display: block;
+  height: 600px;
+  width: 100%;
+}
+
+.main-img-border-bottom {
+  height: 10px;
+  width: 0%;
+  background-color: rgba(255,255,255, .9);
+}
+
+.min-img {
+  display: block;
+  float: left;
+  height: 230px;
+  width: 326.5px;
+  margin-left: 10px;
+  transition: .2s;
+}
+
+.min-img:hover { cursor: pointer; }
+
+.min-img-border-left {
+  position: absolute;
+  width: 10px;
+  height: 0;
+  background-color: rgba(255,255,255, .9);
+}
+
+.min-img-border-bottom {
+  position: absolute;
+  width: 0%;
+  right: 0;
+  height: 10px;
+  bottom: -240px;
+  background-color: rgba(255,255,255, .9);
+}
+
+#gallery .min-img.first {
+  margin-left: 0;
+}
+
+.min-img-border-left.one {
+  left: 326.5px;
+}
+
+.min-img-border-left.two {
+  left: 663px;
+}

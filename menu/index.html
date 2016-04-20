@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<style>
+  body { text-align: center; }
+  .menu { margin-top: 50px; width: 100px; display: inline-block; }
+  .menu ul { display: none; list-style: none; }
+  .menu li { margin: 8px 0; padding: 5px 10px; display: block; border: 1px solid #222; box-sizing: border-box; transition: .2s; }
+  .menu li:hover { cursor: pointer; background-color: #222; color: #fff; }
+  .menu li a { color: #222; text-decoration: none; }
+  .menu li:hover a { color: #fff; }
+  .menu p { margin: 0; padding: 5px 10px; display: inline-block; border: 1px solid #222; box-sizing: border-box; transition: .2s; }
+  .menu p:hover { cursor: pointer; background-color: #222; color: #fff; }
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../filter/index.html">Filter</a></li>
+        <li><a href="#" class="current">Menu</a></li>
+        <li><a href="../slider/index.html">Slider</a></li>
+        <li><a href="../">Carousel</a></li>
+        <li><a href="../accordion/index.html">Accordion</a></li>
+        <li><a href="../">Price</a></li>
+        <li><a href="../gallery/index.html">Gallery</a></li>
+        <li><a href="../">Random Tiles</a></li>
+        <li><a href="../header/index.html">Scroll Effects</a></li>
+        <li><a href="../form/index.html">Form</a></li>
+        <li><a href="../timer/index.html">Timer</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="menu">
+    <p>Click me!</p>
+    <ul>
+      <li><a href="#1">Text 1</a></li>
+      <li><a href="#2">Text 2</a></li>
+      <li><a href="#3">Text 3</a></li>
+      <li><a href="#4">Text 4</a></li>
+      <li><a href="#5">Text 5</a></li>
+    </ul>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
