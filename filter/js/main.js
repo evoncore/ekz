@@ -28,7 +28,7 @@
     }
 
     if (this.dataset.num != 'all') {
-      controls[+this.dataset.num].parentNode.classList.add('current');
+      controls[this.dataset.num].parentNode.classList.add('current');
     } else if (this.dataset.num == 'all') {
       controls[0].parentNode.classList.add('current');
     }

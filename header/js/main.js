@@ -56,8 +56,16 @@
       }, 350);
     }
 
-    if (window.pageYOffset > 20) {
-      anchor.style.opacity = 1;
+    if (window.pageYOffset > 5) {
+      anchor.style.display = 'block';
+      if (window.pageYOffset > 20 && anchor.style.display == 'block') {
+        anchor.style.opacity = 1;
+      }
+    } else if (window.pageYOffset < 5) {
+      anchor.style.opacity = 0;
+      if (anchor.style.opacity == 0 && anchor.style.display == 'block') {
+        anchor.style.display = 'none';
+      }
     }
   });
 
