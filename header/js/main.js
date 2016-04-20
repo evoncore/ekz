@@ -28,10 +28,7 @@
 
   doc.addEventListener('scroll', function() {
     h1.style.opacity = 0;
-<<<<<<< HEAD
 
-=======
->>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
     if (window.pageYOffset > 20) {
       addForCollection(headerA, '10px 20px');
       header.style.backgroundColor = 'rgba(34, 34, 34, .5)';
@@ -53,19 +50,12 @@
     }
 
     if (window.pageYOffset > 550) {
-<<<<<<< HEAD
       setInterval(function() {
         squareBlock.style.opacity = 1;
       }, 700)
     }
 
     if (window.pageYOffset > 1000) {
-=======
-      squareBlock.style.opacity = 1;
-    }
-
-    if (window.pageYOffset > 750) {
->>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
       setInterval(function() {
         flyingBlocks[0].style.opacity = 1;
         flyingBlocks[0].style.marginLeft = '55px';

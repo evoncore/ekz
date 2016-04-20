@@ -4,20 +4,13 @@
 
   var doc,
       menu,
-<<<<<<< HEAD
       menuUl,
       a;
-=======
-      menuUl;
->>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
 
   doc = document;
   menu = doc.querySelector('.menu');
   menuUl = doc.querySelector('.menu ul');
-<<<<<<< HEAD
   a = doc.querySelectorAll('.menu a');
-=======
->>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
 
   menu.addEventListener('click', function() {
 
@@ -28,7 +21,6 @@
     }
   });
 
-<<<<<<< HEAD
   doc.addEventListener('click', function(e) {
     var target = e.target; 
     if (target == doc.body && target != a) {
@@ -36,8 +28,6 @@
     }
   });
 
-=======
->>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
   // menu.addEventListener('click', function(e) {
   //   e.preventDefault();
   //   var target = e.target;

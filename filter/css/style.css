@@ -15,6 +15,7 @@
 
 .panel {
   margin: 20px;
+  margin-top: 25px;
 }
 
 .panel:hover { cursor: default; }
@@ -46,6 +47,11 @@
 
 .panel label:hover {
   cursor: pointer;
+}
+
+.panel span {
+  vertical-align: middle;
+  margin-left: 10px;
 }
 
 .block {
