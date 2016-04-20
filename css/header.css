@@ -30,9 +30,12 @@ header ul a {
 header ul a:hover {
   background-color: #fff;
   color: #222;
+<<<<<<< HEAD
 }
 
 header a.current {
   background-color: #fff;
   color: #222;
+=======
+>>>>>>> 8cf74487947348dd06bb50939791da9335c1ec17
 }
