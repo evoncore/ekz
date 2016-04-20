@@ -2,13 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Slider</title>
+  <title>Price</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <style>
-  body {
-    padding: 0;
+  body { text-align: center; }
+  .bar {
+    display: inline-block;
+    margin-top: 50px;
+    width: 200px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #222;
+    box-shadow: inset 0 0 5px rgba(255,255,255,.5);
+    position: relative;
+  }
+  .slider-bar {
+    height: 30px;
+    width: 12px;
+    margin-top: -5px;
+    background: #999;
+    border-radius: 3px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,.5);
+    position: absolute;
+  }
+  .slider-bar:hover {
+    cursor: pointer;
+  }
+  .bar-display {
+    margin-top: 20px;
+    display: block;
   }
 </style>
 <body>
@@ -17,10 +40,10 @@
       <ul>
         <li><a href="../filter/index.html">Filter</a></li>
         <li><a href="../menu/index.html">Menu</a></li>
-        <li><a href="#" class="current">Slider</a></li>
+        <li><a href="../slider/index.html">Slider</a></li>
         <li><a href="../">Carousel</a></li>
         <li><a href="../accordion/index.html">Accordion</a></li>
-        <li><a href="../price/index.html">Price</a></li>
+        <li><a href="#" class="current">Price</a></li>
         <li><a href="../gallery/index.html">Gallery</a></li>
         <li><a href="../">Random Tiles</a></li>
         <li><a href="../header/index.html">Scroll Effects</a></li>
@@ -29,12 +52,10 @@
       </ul>
     </nav>
   </header>
-  <div id="slider">
-    <div class="slider-img"></div>
-    <a href="#" class="btn prev fa fa-angle-left"></a>
-    <a href="#" class="btn next fa fa-angle-right"></a>
-    <div class="slider-controls"></div>
+  <div class="bar">
+    <div class="slider-bar"></div>
   </div>
+  <span class="bar-display">0 USD</span>
   <script src="js/main.js"></script>
 </body>
 </html>
