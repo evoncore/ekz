@@ -14,12 +14,23 @@
   sliderBar.style.left = '0';
 
   sliderBar.addEventListener('mousedown', function(e) {
-    var thumbCoords = getCoords(sliderBar);
-    var shiftX = e.pageX - thumbCoords.left;
-
-    var sliderCoords = getCoords(bar);
+    var thumbCoords = getCoords(sliderBar),
+        shiftX = e.pageX - thumbCoords.left,
+        sliderCoords = getCoords(bar);
 
     doc.onmousemove = function(e) {
+      var price = sliderBar.style.left,
+          result;
+      if (price.charAt(1) == 'p') {
+        result = 1;
+      } else if (price.charAt(2) == 'p') {
+        result = 2;
+      } else if (price.charAt(3) == 'p') {
+        result = 3;
+      }
+
+      barDisplay.innerHTML = +price.slice(0, result) * 5 + ' USD';
+
       var newLeft = e.pageX - shiftX - sliderCoords.left;
 
       if (newLeft < 0) {
@@ -34,17 +45,6 @@
     };
 
     doc.addEventListener('mouseup', function() {
-      var price = sliderBar.style.left,
-          result;
-      if (price.charAt(1) == 'p') {
-        result = 1;
-      } else if (price.charAt(2) == 'p') {
-        result = 2;
-      } else if (price.charAt(3) == 'p') {
-        result = 3;
-      }
-
-      barDisplay.innerHTML = +price.slice(0, result) * 5 + ' USD';
       doc.onmousemove = doc.onmouseup = null;
     });
 

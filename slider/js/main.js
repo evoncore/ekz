@@ -22,6 +22,7 @@
 
   count = 0;
   speed = 50;
+  slideShowSpeed = 5000;
   slideShow('on'); // "on" or "off"
 
 
@@ -169,7 +170,7 @@
 
           showImg(slider);
         }
-      }, 5000);
+      }, slideShowSpeed);
       console.log('slide-show on');
     } else {
       console.log('slide-show off');

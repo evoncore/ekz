@@ -1,5 +1,6 @@
 body {
   padding: 59px 0;
+  font-family: Montserrat, sans-serif, Arial;
 }
 
 header {
@@ -30,9 +31,11 @@ header ul a {
 header ul a:hover {
   background-color: #fff;
   color: #222;
+  box-shadow: 0 -15px 15px rgba(0,0,0, .5);
 }
 
 header a.current {
   background-color: #fff;
   color: #222;
+  box-shadow: 0 -15px 15px rgba(0,0,0, .5);
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<style>
+  #carousel { position: relative; margin: 50px auto; width: 490px; }
+  #carousel-items { width: 9999px; height: 300px; transition: .5s; }
+  .caru-item { display: block; width: 225px; height: 300px; background-color: #222; float: left; margin: 10px; box-shadow: 0 0 5px rgba(0,0,0, .4); }
+  .caru-container { overflow: hidden; }
+  .fa { color: #222; font-size: 50px; text-decoration: none; position: absolute; opacity: .5; transition: .2s; text-shadow: 0 0 5px rgba(0,0,0, .4); }
+  .fa:hover { opacity: .8; }
+  .caru-left { top: 50%; left: -70px; margin-top: -25px; }
+  .caru-right { top: 50%; right: -70px; margin-top: -25px; }
+</style>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../filter/index.html">Filter</a></li>
+        <li><a href="../menu/index.html">Menu</a></li>
+        <li><a href="../slider/index.html">Slider</a></li>
+        <li><a href="#" class="current">Carousel</a></li>
+        <li><a href="../accordion/index.html">Accordion</a></li>
+        <li><a href="../price/index.html">Price</a></li>
+        <li><a href="../gallery/index.html">Gallery</a></li>
+        <li><a href="../random/index.html">Random Tiles</a></li>
+        <li><a href="../header/index.html">Scroll Effects</a></li>
+        <li><a href="../form/index.html">Form</a></li>
+        <li><a href="../timer/index.html">Timer</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="carousel">
+    <a href="#" class="caru-left fa fa-angle-left"></a>
+    <a href="#" class="caru-right fa fa-angle-right"></a>
+    <div class="caru-container">
+      <div id="carousel-items">
+        <img src="img/5-min.jpg" class="caru-item">
+        <img src="img/2-min.jpg" class="caru-item">
+        <img src="img/3-min.jpg" class="caru-item">
+        <img src="img/4-min.jpg" class="caru-item">
+        <img src="img/1-min.jpg" class="caru-item">
+        <img src="img/6-min.jpg" class="caru-item">
+        <img src="img/9.jpg" class="caru-item">
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
